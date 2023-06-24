@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
       },
       {
         model: Tag,
+        through: ProductTag,
         required: true
       }]
   });
@@ -36,6 +37,7 @@ try {
     },
     {
       model: Tag,
+      through: ProductTag,
       required: true
     }],
     where: {
